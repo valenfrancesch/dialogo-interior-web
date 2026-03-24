@@ -1,261 +1,334 @@
 <!DOCTYPE html>
 
-<html class="light" lang="es"><head>
-<meta charset="utf-8"/>
-<title>Diálogo Interior</title>
-<link rel="icon" type="image/png" href="icon.png">
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              "tertiary-container": "#005482",
-              "surface-tint": "#b02c29",
-              "on-tertiary": "#ffffff",
-              "on-tertiary-container": "#8dc8fc",
-              "surface-bright": "#fdf9f4",
-              "on-primary-fixed-variant": "#8e1114",
-              "on-surface": "#1c1c19",
-              "primary-container": "#9b1c1c",
-              "surface-container-high": "#ebe8e3",
-              "inverse-surface": "#31302d",
-              "surface-container": "#f1ede8",
-              "tertiary-fixed": "#cde5ff",
-              "on-secondary-fixed": "#3c0606",
-              "on-error-container": "#93000a",
-              "surface-dim": "#ddd9d5",
-              "tertiary-fixed-dim": "#94ccff",
-              "on-secondary-fixed-variant": "#76312c",
-              "surface-variant": "#e6e2dd",
-              "on-background": "#1c1c19",
-              "primary-fixed": "#ffdad6",
-              "background": "#fdf9f4",
-              "primary": "#780009",
-              "on-tertiary-fixed": "#001d32",
-              "on-tertiary-fixed-variant": "#004b74",
-              "on-secondary-container": "#79342e",
-              "error-container": "#ffdad6",
-              "secondary-fixed": "#ffdad6",
-              "error": "#ba1a1a",
-              "surface-container-low": "#f7f3ee",
-              "on-error": "#ffffff",
-              "surface": "#fdf9f4",
-              "tertiary": "#003c5f",
-              "secondary-container": "#fe9f96",
-              "on-secondary": "#ffffff",
-              "secondary": "#934842",
-              "inverse-primary": "#ffb4ac",
-              "on-primary-container": "#ffada4",
-              "primary-fixed-dim": "#ffb4ac",
-              "outline": "#8d706d",
-              "outline-variant": "#e1bfbb",
-              "surface-container-highest": "#e6e2dd",
-              "on-primary": "#ffffff",
-              "on-surface-variant": "#59413e",
-              "surface-container-lowest": "#ffffff",
-              "inverse-on-surface": "#f4f0eb",
-              "on-primary-fixed": "#410003",
-              "secondary-fixed-dim": "#ffb4ac"
+<html class="light" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Diálogo Interior</title>
+    <link rel="icon" type="image/png" href="icon.png">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "tertiary-container": "#005482",
+                        "surface-tint": "#b02c29",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-container": "#8dc8fc",
+                        "surface-bright": "#fdf9f4",
+                        "on-primary-fixed-variant": "#8e1114",
+                        "on-surface": "#1c1c19",
+                        "primary-container": "#9b1c1c",
+                        "surface-container-high": "#ebe8e3",
+                        "inverse-surface": "#31302d",
+                        "surface-container": "#f1ede8",
+                        "tertiary-fixed": "#cde5ff",
+                        "on-secondary-fixed": "#3c0606",
+                        "on-error-container": "#93000a",
+                        "surface-dim": "#ddd9d5",
+                        "tertiary-fixed-dim": "#94ccff",
+                        "on-secondary-fixed-variant": "#76312c",
+                        "surface-variant": "#e6e2dd",
+                        "on-background": "#1c1c19",
+                        "primary-fixed": "#ffdad6",
+                        "background": "#fdf9f4",
+                        "primary": "#780009",
+                        "on-tertiary-fixed": "#001d32",
+                        "on-tertiary-fixed-variant": "#004b74",
+                        "on-secondary-container": "#79342e",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed": "#ffdad6",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#f7f3ee",
+                        "on-error": "#ffffff",
+                        "surface": "#fdf9f4",
+                        "tertiary": "#003c5f",
+                        "secondary-container": "#fe9f96",
+                        "on-secondary": "#ffffff",
+                        "secondary": "#934842",
+                        "inverse-primary": "#ffb4ac",
+                        "on-primary-container": "#ffada4",
+                        "primary-fixed-dim": "#ffb4ac",
+                        "outline": "#8d706d",
+                        "outline-variant": "#e1bfbb",
+                        "surface-container-highest": "#e6e2dd",
+                        "on-primary": "#ffffff",
+                        "on-surface-variant": "#59413e",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-on-surface": "#f4f0eb",
+                        "on-primary-fixed": "#410003",
+                        "secondary-fixed-dim": "#ffb4ac"
+                    },
+                    fontFamily: {
+                        "headline": ["Noto Serif", "serif"],
+                        "body": ["Manrope", "sans-serif"],
+                        "label": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
             },
-            fontFamily: {
-              "headline": ["Noto Serif", "serif"],
-              "body": ["Manrope", "sans-serif"],
-              "label": ["Manrope", "sans-serif"]
-            },
-            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
-          },
-        },
-      }
+        }
     </script>
-<style>
+    <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
+
         body {
             font-family: 'Manrope', sans-serif;
             background-color: #fdf9f4;
         }
-        h1, h2, h3, .font-noto-serif {
+
+        h1,
+        h2,
+        h3,
+        .font-noto-serif {
             font-family: 'Noto Serif', serif;
         }
+
         html {
             scroll-behavior: smooth;
         }
     </style>
-<style>
+    <style>
         body {
-          min-height: max(884px, 100dvh);
+            min-height: max(884px, 100dvh);
         }
     </style>
 </head>
+
 <body class="text-on-surface selection:bg-primary-container selection:text-white">
-<!-- TopAppBar -->
-<header class="fixed top-0 w-full bg-white dark:bg-stone-950 border-b border-stone-200 dark:border-stone-800 shadow-sm z-50">
-<nav class="flex justify-between items-center px-6 py-3 max-w-7xl mx-auto">
-<div class="flex items-center gap-3">
-<img src="icon.png" alt="Logo" class="w-8 h-8 rounded-lg shadow-sm">
-<span class="text-xl font-bold text-red-900 dark:text-red-500 font-noto-serif">Diálogo Interior</span>
-</div>
-<div class="flex items-center">
-<a href="https://cafecito.app/dialogo-interior" target="_blank" class="bg-primary text-on-primary px-5 py-2 rounded-lg font-medium hover:opacity-90 transition-opacity">Donar</a>
-</div>
-</nav>
-</header>
-<main class="pt-16">
-<!-- Hero Section -->
-<section class="relative min-h-[751px] flex items-center justify-center overflow-hidden bg-surface-container-low">
-<div class="absolute inset-0 z-0">
-<img alt="Atmospheric spiritual light" class="w-full h-full object-cover opacity-20 mix-blend-multiply" data-alt="Soft ethereal sunlight streaming through a hazy atmosphere, creating a peaceful and spiritual feeling of divine presence" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWi4T_x0z9_44tCjsejkb0iVcmh3Q-FFuoz_GaA725mTFf4VUjMDopkrylmaD_x1ClflbvRiSrXVLPY9HDt1qtXNuHkV3xiiPUh0KkmvW4ArC3cQ30eAYKZmfhS9nAZ5dPPi_yWqQLIGQrhNMWJkrgVCJtn9lFoFJRCdNiqFPBtxhmJgN8yqyjxWE9_bxg14ILjwjd4-uc9whMS9bFWj_aWvVmFmrgZY5EJaAj6gFpVZ_DWGTFtTxKNWnDeMV2GpRzuZHfPMeezA"/>
-<div class="absolute inset-0 bg-gradient-to-b from-surface-container-low/50 via-transparent to-surface-container-low"></div>
-</div>
-<div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
-<span class="inline-block py-1 px-4 rounded-full bg-primary/10 text-primary font-medium text-sm mb-6 uppercase tracking-wider">Tu Refugio Espiritual</span>
-<h1 class="text-5xl md:text-7xl font-bold text-primary mb-8 leading-tight">Tu Compañero en el Camino Espiritual</h1>
-<p class="text-xl md:text-2xl text-on-surface-variant mb-10 max-w-2xl mx-auto leading-relaxed">
-                    Encontrá a Dios en medio de la rutina. Reflexiones diarias, lecturas y un lugar íntimo para que la Palabra te acompañe adonde vayas.
+    <!-- TopAppBar -->
+    <header
+        class="fixed top-0 w-full bg-white dark:bg-stone-950 border-b border-stone-200 dark:border-stone-800 shadow-sm z-50">
+        <nav class="flex justify-between items-center px-6 py-3 max-w-7xl mx-auto">
+            <div class="flex items-center gap-3">
+                <img src="icon.png" alt="Logo" class="w-8 h-8 rounded-lg shadow-sm">
+                <span class="text-xl font-bold text-red-900 dark:text-red-500 font-noto-serif">Diálogo Interior</span>
+            </div>
+            <div class="flex items-center">
+                <a href="https://cafecito.app/dialogo-interior" target="_blank"
+                    class="bg-primary text-on-primary px-5 py-2 rounded-lg font-medium hover:opacity-90 transition-opacity">Donar</a>
+            </div>
+        </nav>
+    </header>
+    <main class="pt-16">
+        <!-- Hero Section -->
+        <section
+            class="relative min-h-[751px] flex items-center justify-center overflow-hidden bg-surface-container-low">
+            <div class="absolute inset-0 z-0">
+                <img alt="Atmospheric spiritual light" class="w-full h-full object-cover opacity-20 mix-blend-multiply"
+                    data-alt="Soft ethereal sunlight streaming through a hazy atmosphere, creating a peaceful and spiritual feeling of divine presence"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWi4T_x0z9_44tCjsejkb0iVcmh3Q-FFuoz_GaA725mTFf4VUjMDopkrylmaD_x1ClflbvRiSrXVLPY9HDt1qtXNuHkV3xiiPUh0KkmvW4ArC3cQ30eAYKZmfhS9nAZ5dPPi_yWqQLIGQrhNMWJkrgVCJtn9lFoFJRCdNiqFPBtxhmJgN8yqyjxWE9_bxg14ILjwjd4-uc9whMS9bFWj_aWvVmFmrgZY5EJaAj6gFpVZ_DWGTFtTxKNWnDeMV2GpRzuZHfPMeezA" />
+                <div
+                    class="absolute inset-0 bg-gradient-to-b from-surface-container-low/50 via-transparent to-surface-container-low">
+                </div>
+            </div>
+            <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
+                <span
+                    class="inline-block py-1 px-4 rounded-full bg-primary/10 text-primary font-medium text-sm mb-6 uppercase tracking-wider">Tu
+                    Refugio Espiritual</span>
+                <h1 class="text-5xl md:text-7xl font-bold text-primary mb-8 leading-tight">Tu Compañero en el Camino
+                    Espiritual</h1>
+                <p class="text-xl md:text-2xl text-on-surface-variant mb-10 max-w-2xl mx-auto leading-relaxed">
+                    Encontrá a Dios en medio de la rutina. Reflexiones diarias, lecturas y un lugar íntimo para que la
+                    Palabra te acompañe adonde vayas.
                 </p>
-<div class="flex flex-col sm:flex-row gap-4 justify-center">
-<button onclick="document.getElementById('download').scrollIntoView({ behavior: 'smooth' })" class="bg-primary text-on-primary px-8 py-4 rounded-xl text-lg font-semibold shadow-xl hover:scale-[1.02] transition-transform">
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button onclick="document.getElementById('download').scrollIntoView({ behavior: 'smooth' })"
+                        class="bg-primary text-on-primary px-8 py-4 rounded-xl text-lg font-semibold shadow-xl hover:scale-[1.02] transition-transform">
                         Comenzar Lectura
                     </button>
-<button onclick="document.getElementById('features').scrollIntoView({ behavior: 'smooth' })" class="bg-white border-2 border-outline-variant text-primary px-8 py-4 rounded-xl text-lg font-semibold hover:bg-surface-container-high transition-colors">
+                    <button onclick="document.getElementById('features').scrollIntoView({ behavior: 'smooth' })"
+                        class="bg-white border-2 border-outline-variant text-primary px-8 py-4 rounded-xl text-lg font-semibold hover:bg-surface-container-high transition-colors">
                         Saber más
                     </button>
-</div>
-</div>
-</section>
-<!-- App Features (Bento Grid) -->
-<section id="features" class="py-24 px-6 max-w-7xl mx-auto">
-<div class="text-center mb-16">
-<h2 class="text-3xl md:text-5xl font-bold text-on-surface mb-4">Herramientas para tu Fe</h2>
-<p class="text-on-surface-variant max-w-xl mx-auto">Descubre las funcionalidades que te acompañarán en tu crecimiento espiritual diario.</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:auto-rows-[300px]">
-<!-- Main Feature -->
-<div class="md:col-span-8 md:row-span-2 bg-primary-container rounded-3xl p-10 flex flex-col justify-between text-on-primary-container relative overflow-hidden group">
-<div class="relative z-10">
-<span class="material-symbols-outlined text-5xl mb-6" data-icon="auto_stories" style="font-variation-settings: 'FILL' 1;">auto_stories</span>
-<h3 class="text-4xl font-bold mb-4 font-noto-serif">Lectura del Día</h3>
-<p class="text-xl opacity-90 max-w-md">Accede al Evangelio diario y oraciones seleccionadas para cada momento litúrgico. Una conexión directa con la palabra sagrada.</p>
-<p class="mt-6 text-sm italic opacity-75">Lecturas extraídas de "El Libro del Pueblo de Dios".</p>
-</div>
-<img class="absolute right-0 bottom-0 w-2/3 h-full object-cover opacity-20 group-hover:scale-110 transition-transform duration-700" data-alt="An open antique Bible on a wooden table with soft candle light illuminating the parchment pages" src="https://lh3.googleusercontent.com/aida-public/AB6AXuActpa6VMR6Pn7ksMeft3CH3mQik-3ff1TEHd8ZV7sqibFfFfww63jXwe7d_NJWYpg2g5p_zLcDRJkt2Kt0H5wBogvcQV3oRq3d6484JS7ZiEVhekYrplBp6nLq10oEdibyqkBl6pWeeFqi5122O4rYavvqYYdk0RyOI9zBccKrOMX6PW7XIArQMNQULVihKSa1be0wmbCfgeB2i8Hj2gQgec8UoLRJjqj7O1q0-r_HtzjAUXlNTX4_e9V0SyZLP5w9j1X8x6uijQ"/>
-</div>
-<!-- Feature 2 -->
-<div class="md:col-span-4 bg-surface-container-highest rounded-3xl p-8 flex flex-col justify-end border border-outline-variant group">
-<span class="material-symbols-outlined text-primary text-4xl mb-4" data-icon="bookmark">bookmark</span>
-<h3 class="text-2xl font-bold text-on-surface mb-2">Biblioteca de Fe</h3>
-<p class="text-on-surface-variant">Guarda tus reflexiones favoritas y lecturas inspiradoras para volver a ellas cuando más lo necesites.</p>
-</div>
-<!-- Feature 3 -->
-<div class="md:col-span-4 bg-white rounded-3xl p-8 flex flex-col justify-end border border-outline-variant shadow-sm group">
-<span class="material-symbols-outlined text-primary text-4xl mb-4" data-icon="edit_note">edit_note</span>
-<h3 class="text-2xl font-bold text-on-surface mb-2">Diario Personal</h3>
-<p class="text-on-surface-variant">Un espacio íntimo para escribir tus pensamientos, oraciones y lo que Dios pone en tu corazón cada día.</p>
-</div>
-</div>
-</section>
-<!-- Sobre el Creador Section -->
-<section class="py-24 bg-white">
-<div class="max-w-4xl mx-auto px-6 text-center">
-<h2 class="text-3xl md:text-5xl font-bold text-primary mb-8">El corazón del proyecto</h2>
-<div class="bg-surface-container-low p-8 md:p-12 rounded-[2rem] border border-outline-variant/30">
-<div class="w-24 h-24 bg-primary/10 rounded-full mx-auto mb-8 flex items-center justify-center">
-<span class="material-symbols-outlined text-primary text-4xl" data-icon="person">person</span>
-</div>
-<p class="text-lg text-on-surface-variant leading-relaxed italic">
-                       ¡Hola! Soy Valen. Tengo 20 años, estudio Ingeniería en Sistemas en Argentina y acompaño a grupos de jóvenes organizando actividades que fomentan su desarrollo espiritual y personal. Estoy convencida de que la educación y los valores son pilares fundamentales para la vida.
-</br>
-Diálogo Interior nació de unir mis dos grandes pasiones: la tecnología y mi camino de fe. En medio de la rutina acelerada de hoy, buscaba crear un refugio digital en nuestros celulares; un lugar limpio, sin ruido y sin distracciones para poder frenar un ratito a rezar.
-                    </p>
-<div class="mt-8 pt-8 border-t border-outline-variant/20">
-<p class="text-primary font-bold font-noto-serif">La misión de Diálogo Interior</p>
-<p class="text-lg text-on-surface-variant leading-relaxed italic">
-                      Queremos que conectar con la Palabra de Dios sea algo sencillo y cercano. Nuestra misión es brindarte una herramienta de paz que te acompañe todos los días, ayudándote a atesorar tus reflexiones, guardar tus propósitos y encontrar un momento de silencio en medio del ruido del mundo.</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Donation Section -->
-<section class="py-24 bg-surface-container">
-<div class="max-w-7xl mx-auto px-6">
-<div class="bg-white rounded-[2rem] overflow-hidden shadow-2xl flex flex-col lg:flex-row">
-<div class="lg:w-1/2 p-12 md:p-20 flex flex-col justify-center">
-<h2 class="text-4xl md:text-5xl font-bold text-primary mb-8 leading-tight">Apoya Nuestra Misión</h2>
-<p class="text-lg text-on-surface-variant mb-10 leading-relaxed">
-                            Diálogo Interior es un proyecto sin fines de lucro dedicado a llevar la palabra de Dios a todos los rincones del mundo. Tu generosidad nos permite mantener la aplicación gratuita, sin publicidad y en constante mejora.
+                </div>
+            </div>
+        </section>
+        <!-- App Features (Bento Grid) -->
+        <section id="features" class="py-24 px-6 max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold text-on-surface mb-4">Herramientas para tu Fe</h2>
+                <p class="text-on-surface-variant max-w-xl mx-auto">Descubre las funcionalidades que te acompañarán en
+                    tu crecimiento espiritual diario.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:auto-rows-[300px]">
+                <!-- Main Feature -->
+                <div
+                    class="md:col-span-8 md:row-span-2 bg-primary-container rounded-3xl p-10 flex flex-col justify-between text-on-primary-container relative overflow-hidden group">
+                    <div class="relative z-10">
+                        <span class="material-symbols-outlined text-5xl mb-6" data-icon="auto_stories"
+                            style="font-variation-settings: 'FILL' 1;">auto_stories</span>
+                        <h3 class="text-4xl font-bold mb-4 font-noto-serif">Lectura del Día</h3>
+                        <p class="text-xl opacity-90 max-w-md">Accede al Evangelio diario y oraciones seleccionadas para
+                            cada momento litúrgico. Una conexión directa con la palabra sagrada.</p>
+                        <p class="mt-6 text-sm italic opacity-75">Lecturas extraídas de "El Libro del Pueblo de Dios".
                         </p>
-<div class="flex flex-wrap gap-4 mb-10">
-<div class="flex items-center gap-2 bg-primary/5 px-4 py-2 rounded-full border border-primary/10">
-<span class="material-symbols-outlined text-primary text-sm" data-icon="check_circle">check_circle</span>
-<span class="text-primary font-medium">Sin Publicidad</span>
-</div>
-<div class="flex items-center gap-2 bg-primary/5 px-4 py-2 rounded-full border border-primary/10">
-<span class="material-symbols-outlined text-primary text-sm" data-icon="check_circle">check_circle</span>
-<span class="text-primary font-medium">Contenido Gratuito</span>
-</div>
+                    </div>
+                    <img class="absolute right-0 bottom-0 w-2/3 h-full object-cover opacity-20 group-hover:scale-110 transition-transform duration-700"
+                        data-alt="An open antique Bible on a wooden table with soft candle light illuminating the parchment pages"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuActpa6VMR6Pn7ksMeft3CH3mQik-3ff1TEHd8ZV7sqibFfFfww63jXwe7d_NJWYpg2g5p_zLcDRJkt2Kt0H5wBogvcQV3oRq3d6484JS7ZiEVhekYrplBp6nLq10oEdibyqkBl6pWeeFqi5122O4rYavvqYYdk0RyOI9zBccKrOMX6PW7XIArQMNQULVihKSa1be0wmbCfgeB2i8Hj2gQgec8UoLRJjqj7O1q0-r_HtzjAUXlNTX4_e9V0SyZLP5w9j1X8x6uijQ" />
+                </div>
+                <!-- Feature 2 -->
+                <div
+                    class="md:col-span-4 bg-surface-container-highest rounded-3xl p-8 flex flex-col justify-end border border-outline-variant group">
+                    <span class="material-symbols-outlined text-primary text-4xl mb-4"
+                        data-icon="bookmark">bookmark</span>
+                    <h3 class="text-2xl font-bold text-on-surface mb-2">Biblioteca de Fe</h3>
+                    <p class="text-on-surface-variant">Guarda tus reflexiones favoritas y lecturas inspiradoras para
+                        volver a ellas cuando más lo necesites.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div
+                    class="md:col-span-4 bg-white rounded-3xl p-8 flex flex-col justify-end border border-outline-variant shadow-sm group">
+                    <span class="material-symbols-outlined text-primary text-4xl mb-4"
+                        data-icon="edit_note">edit_note</span>
+                    <h3 class="text-2xl font-bold text-on-surface mb-2">Diario Personal</h3>
+                    <p class="text-on-surface-variant">Un espacio íntimo para escribir tus pensamientos, oraciones y lo
+                        que Dios pone en tu corazón cada día.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Sobre el Creador Section -->
+        <section class="py-24 bg-white">
+            <div class="max-w-4xl mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-5xl font-bold text-primary mb-8">El corazón del proyecto</h2>
+                <div class="bg-surface-container-low p-8 md:p-12 rounded-[2rem] border border-outline-variant/30">
+                    <div class="w-24 h-24 bg-primary/10 rounded-full mx-auto mb-8 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-primary text-4xl" data-icon="person">person</span>
+                    </div>
+                    <p class="text-lg text-on-surface-variant leading-relaxed italic">
+                        ¡Hola! Soy Valen. Tengo 20 años, estudio Ingeniería en Sistemas en Argentina y acompaño a grupos
+                        de jóvenes organizando actividades que fomentan su desarrollo espiritual y personal. Estoy
+                        convencida de que la educación y los valores son pilares fundamentales para la vida.
+                        </br>
+                        Diálogo Interior nació de unir mis dos grandes pasiones: la tecnología y mi camino de fe. En
+                        medio de la rutina acelerada de hoy, buscaba crear un refugio digital en nuestros celulares; un
+                        lugar limpio, sin ruido y sin distracciones para poder frenar un ratito a rezar.
+                    </p>
+                    <div class="mt-8 pt-8 border-t border-outline-variant/20">
+                        <p class="text-primary font-bold font-noto-serif">La misión de Diálogo Interior</p>
+                        <p class="text-lg text-on-surface-variant leading-relaxed italic">
+                            Queremos que conectar con la Palabra de Dios sea algo sencillo y cercano. Nuestra misión es
+                            brindarte una herramienta de paz que te acompañe todos los días, ayudándote a atesorar tus
+                            reflexiones, guardar tus propósitos y encontrar un momento de silencio en medio del ruido
+                            del mundo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Donation Section -->
+        <section id="donar" class="py-24 bg-surface-container">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="bg-white rounded-[2rem] overflow-hidden shadow-2xl flex flex-col lg:flex-row">
+                    <div class="lg:w-1/2 p-12 md:p-20 flex flex-col justify-center">
+                        <h2 class="text-4xl md:text-5xl font-bold text-primary mb-8 leading-tight">Apoya Nuestra Misión
+                        </h2>
+                        <p class="text-lg text-on-surface-variant mb-10 leading-relaxed">
+                            Diálogo Interior es un proyecto sin fines de lucro dedicado a llevar la palabra de Dios a
+                            todos los rincones del mundo. Tu generosidad nos permite mantener la aplicación gratuita,
+                            sin publicidad y en constante mejora.
+                        </p>
+                        <div class="flex flex-wrap gap-4 mb-10">
+                            <div
+                                class="flex items-center gap-2 bg-primary/5 px-4 py-2 rounded-full border border-primary/10">
+                                <span class="material-symbols-outlined text-primary text-sm"
+                                    data-icon="check_circle">check_circle</span>
+                                <span class="text-primary font-medium">Sin Publicidad</span>
+                            </div>
+                            <div
+                                class="flex items-center gap-2 bg-primary/5 px-4 py-2 rounded-full border border-primary/10">
+                                <span class="material-symbols-outlined text-primary text-sm"
+                                    data-icon="check_circle">check_circle</span>
+                                <span class="text-primary font-medium">Contenido Gratuito</span>
+                            </div>
 
-</div>
-<a class="inline-block bg-primary text-on-primary text-center px-10 py-5 rounded-2xl text-xl font-bold hover:bg-primary/90 transition-colors shadow-lg shadow-primary/20" href="https://cafecito.app/dialogo-interior" target="_blank">
+                        </div>
+                        <a class="inline-block bg-primary text-on-primary text-center px-10 py-5 rounded-2xl text-xl font-bold hover:bg-primary/90 transition-colors shadow-lg shadow-primary/20"
+                            href="https://cafecito.app/dialogo-interior" target="_blank">
                             Donar Ahora
                         </a>
-</div>
-<div class="lg:w-1/2 relative min-h-[400px]">
-<img class="absolute inset-0 w-full h-full object-cover" data-alt="Hands gently holding a small olive wood cross in a gesture of prayer and gratitude, warm natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsgoysSDS1AUtO--HjAKvLyejELMcjqmCRLCygYhZJIXVYyEsDUd8bPmu9-bDJA9lMm5sJ6_y8Tab9JC1VexEa8MflqIahIl-aPzf9SN51wr2G3rQmko05ySXENCroS_pZ89CT5i1IpPGRl6ih5_5vVIE7ueTNhvFDNMiJ5PPxKByQVat5W7aKhN08rLyo0eDKSQwGaIhr9vH-F5XTzWVMMVXy9veVv0piuRSSfYdfyx8_-1NZO432UyOq0lOjLJTKNKc_fbmwDg"/>
-<div class="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
-</div>
-</div>
-</div>
-</section>
-<!-- Contact Section -->
-<section id="contact" class="py-24 bg-surface-container-low border-y border-outline-variant/20">
-<div class="max-w-4xl mx-auto px-6 text-center">
-<h2 class="text-3xl font-bold text-on-surface mb-6">Contacto</h2>
-<p class="text-lg text-on-surface-variant mb-4">¿Tienes alguna duda o sugerencia?</p>
-<p class="text-2xl font-bold text-primary select-all">dialogo.interior.app@gmail.com</p>
-</div>
-</section>
-<!-- Call to Action -->
-<section id="download" class="py-24 text-center px-6">
-<div class="max-w-3xl mx-auto">
-<h2 class="text-4xl md:text-6xl font-bold text-on-surface mb-8">¿Listo para profundizar en tu fe?</h2>
-<p class="text-xl text-on-surface-variant mb-12">Únete a miles de personas que inician su día en conversación con Dios.</p>
-<div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
-<a href="https://play.google.com/store/apps/details?id=com.dialogointerior.app" target="_blank" class="block hover:opacity-80 transition-opacity">
-    <img alt="Google Play" class="h-14 cursor-pointer" data-alt="Official Google Play Store download badge" src="google-play-store-logo-png-transparent.png"/>
-</a>
-</div>
-<div class="mt-16">
-<a href="https://play.google.com/store/apps/details?id=com.dialogointerior.app" target="_blank" class="text-primary font-bold text-2xl flex items-center gap-2 mx-auto hover:gap-4 transition-all group w-fit">
-                        Comenzar Hoy 
+                    </div>
+                    <div class="lg:w-1/2 relative min-h-[400px]">
+                        <img class="absolute inset-0 w-full h-full object-cover"
+                            data-alt="Hands gently holding a small olive wood cross in a gesture of prayer and gratitude, warm natural lighting"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsgoysSDS1AUtO--HjAKvLyejELMcjqmCRLCygYhZJIXVYyEsDUd8bPmu9-bDJA9lMm5sJ6_y8Tab9JC1VexEa8MflqIahIl-aPzf9SN51wr2G3rQmko05ySXENCroS_pZ89CT5i1IpPGRl6ih5_5vVIE7ueTNhvFDNMiJ5PPxKByQVat5W7aKhN08rLyo0eDKSQwGaIhr9vH-F5XTzWVMMVXy9veVv0piuRSSfYdfyx8_-1NZO432UyOq0lOjLJTKNKc_fbmwDg" />
+                        <div class="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Section -->
+        <section id="contact" class="py-24 bg-surface-container-low border-y border-outline-variant/20">
+            <div class="max-w-4xl mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold text-on-surface mb-6">Contacto</h2>
+                <p class="text-lg text-on-surface-variant mb-4">¿Tienes alguna duda o sugerencia?</p>
+                <p class="text-2xl font-bold text-primary select-all">dialogo.interior.app@gmail.com</p>
+            </div>
+        </section>
+        <!-- Call to Action -->
+        <section id="download" class="py-24 text-center px-6">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-4xl md:text-6xl font-bold text-on-surface mb-8">¿Listo para profundizar en tu fe?</h2>
+                <p class="text-xl text-on-surface-variant mb-12">Únete a miles de personas que inician su día en
+                    conversación con Dios.</p>
+                <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                    <a href="https://play.google.com/store/apps/details?id=com.dialogointerior.app" target="_blank"
+                        class="block hover:opacity-80 transition-opacity">
+                        <img alt="Google Play" class="h-14 cursor-pointer"
+                            data-alt="Official Google Play Store download badge"
+                            src="google-play-store-logo-png-transparent.png" />
+                    </a>
+                </div>
+                <div class="mt-16">
+                    <a href="https://play.google.com/store/apps/details?id=com.dialogointerior.app" target="_blank"
+                        class="text-primary font-bold text-2xl flex items-center gap-2 mx-auto hover:gap-4 transition-all group w-fit">
+                        Comenzar Hoy
                         <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
-</a>
-</div>
-</div>
-</section>
-</main>
-<!-- Footer -->
-<footer class="bg-stone-50 dark:bg-stone-900 border-t border-stone-200 dark:border-stone-800 w-full">
-<div class="flex flex-col md:flex-row justify-between items-center px-8 py-12 w-full max-w-7xl mx-auto">
-<div class="mb-8 md:mb-0 text-center md:text-left">
-<div class="flex items-center gap-2 justify-center md:justify-start mb-4">
-<img src="icon.png" alt="Logo" class="w-6 h-6 rounded-md">
-<span class="font-bold text-stone-900 dark:text-stone-100 font-noto-serif text-lg">Diálogo Interior</span>
-</div>
-<p class="text-stone-500 dark:text-stone-500 text-sm font-noto-serif">© 2026 Diálogo Interior. All rights reserved.</p>
-<p class="text-stone-400 dark:text-stone-600 text-[10px] mt-2 font-noto-serif">Lecturas de "El Libro del Pueblo de Dios".</p>
-</div>
-<div class="flex flex-wrap justify-center gap-8 items-center">
-<a class="text-stone-500 hover:text-red-900 dark:hover:text-red-400 font-noto-serif text-sm transition-opacity opacity-80 hover:opacity-100 hover:underline" href="#contact">Contacto</a>
-<a class="text-stone-500 hover:text-[#E4405F] transition-all opacity-80 hover:opacity-100 flex items-center gap-2" href="https://www.instagram.com/dialogo.interior.app/?utm_source=ig_web_button_share_sheet" target="_blank" aria-label="Instagram">
-    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.209-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
-</a>
-</div>
-</div>
-</footer>
-</body></html>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-stone-50 dark:bg-stone-900 border-t border-stone-200 dark:border-stone-800 w-full">
+        <div class="flex flex-col md:flex-row justify-between items-center px-8 py-12 w-full max-w-7xl mx-auto">
+            <div class="mb-8 md:mb-0 text-center md:text-left">
+                <div class="flex items-center gap-2 justify-center md:justify-start mb-4">
+                    <img src="icon.png" alt="Logo" class="w-6 h-6 rounded-md">
+                    <span class="font-bold text-stone-900 dark:text-stone-100 font-noto-serif text-lg">Diálogo
+                        Interior</span>
+                </div>
+                <p class="text-stone-500 dark:text-stone-500 text-sm font-noto-serif">© 2026 Diálogo Interior. All
+                    rights reserved.</p>
+                <p class="text-stone-400 dark:text-stone-600 text-[10px] mt-2 font-noto-serif">Lecturas de "El Libro del
+                    Pueblo de Dios".</p>
+            </div>
+            <div class="flex flex-wrap justify-center gap-8 items-center">
+                <a class="text-stone-500 hover:text-red-900 dark:hover:text-red-400 font-noto-serif text-sm transition-opacity opacity-80 hover:opacity-100 hover:underline"
+                    href="#contact">Contacto</a>
+                <a class="text-stone-500 hover:text-[#E4405F] transition-all opacity-80 hover:opacity-100 flex items-center gap-2"
+                    href="https://www.instagram.com/dialogo.interior.app/?utm_source=ig_web_button_share_sheet"
+                    target="_blank" aria-label="Instagram">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.209-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
