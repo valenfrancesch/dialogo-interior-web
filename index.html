@@ -146,7 +146,7 @@
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
                     <button onclick="document.getElementById('download').scrollIntoView({ behavior: 'smooth' })"
                         class="bg-primary text-on-primary px-8 py-4 rounded-xl text-lg font-semibold shadow-xl hover:scale-[1.02] transition-transform">
-                        Comenzar Lectura
+                        Comenzar
                     </button>
                     <button onclick="document.getElementById('features').scrollIntoView({ behavior: 'smooth' })"
                         class="bg-white border-2 border-outline-variant text-primary px-8 py-4 rounded-xl text-lg font-semibold hover:bg-surface-container-high transition-colors">
@@ -155,50 +155,131 @@
                 </div>
             </div>
         </section>
-        <!-- App Features (Bento Grid) -->
+        <!-- Features Section -->
         <section id="features" class="py-24 px-6 max-w-7xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-5xl font-bold text-on-surface mb-4">Herramientas para tu Fe</h2>
-                <p class="text-on-surface-variant max-w-xl mx-auto">Descubre las funcionalidades que te acompañarán en
-                    tu crecimiento espiritual diario.</p>
+            <div class="text-center mb-20">
+                <h2 class="text-3xl md:text-5xl font-bold text-on-surface mb-6 font-noto-serif">Herramientas para tu Fe
+                </h2>
+                <p class="text-on-surface-variant max-w-2xl mx-auto text-lg">Descubre las funcionalidades diseñadas para
+                    acompañar y fortalecer tu crecimiento espiritual diario.</p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:auto-rows-[300px]">
-                <!-- Main Feature -->
-                <div
-                    class="md:col-span-8 md:row-span-2 bg-primary-container rounded-3xl p-10 flex flex-col justify-between text-on-primary-container relative overflow-hidden group">
-                    <div class="relative z-10">
-                        <span class="material-symbols-outlined text-5xl mb-6" data-icon="auto_stories"
-                            style="font-variation-settings: 'FILL' 1;">auto_stories</span>
-                        <h3 class="text-4xl font-bold mb-4 font-noto-serif">Lectura del Día</h3>
-                        <p class="text-xl opacity-90 max-w-md">Accede al Evangelio diario y oraciones seleccionadas para
-                            cada momento litúrgico. Una conexión directa con la palabra sagrada.</p>
-                        <p class="mt-6 text-sm italic opacity-75">Lecturas extraídas de "El Libro del Pueblo de Dios".
-                        </p>
+            <!-- Bloque 1: Encontrate con la Palabra -->
+            <div class="mb-20">
+                <h3 class="text-2xl font-bold text-primary mb-8 flex items-center gap-3">
+                    <span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+                    Encontrate con la Palabra
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div
+                        class="bg-white p-8 rounded-3xl border border-outline-variant shadow-sm hover:shadow-md transition-shadow">
+                        <span class="material-symbols-outlined text-primary text-3xl mb-4"
+                            data-icon="auto_awesome">auto_awesome</span>
+                        <h4 class="text-xl font-bold mb-3">Lecturas y comentarios diarios</h4>
+                        <p class="text-on-surface-variant text-sm">Arrancá cada jornada con las lecturas del día y una
+                            reflexión que te acompañe.</p>
                     </div>
-                    <img class="absolute right-0 bottom-0 w-2/3 h-full object-cover opacity-20 group-hover:scale-110 transition-transform duration-700"
-                        data-alt="An open antique Bible on a wooden table with soft candle light illuminating the parchment pages"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuActpa6VMR6Pn7ksMeft3CH3mQik-3ff1TEHd8ZV7sqibFfFfww63jXwe7d_NJWYpg2g5p_zLcDRJkt2Kt0H5wBogvcQV3oRq3d6484JS7ZiEVhekYrplBp6nLq10oEdibyqkBl6pWeeFqi5122O4rYavvqYYdk0RyOI9zBccKrOMX6PW7XIArQMNQULVihKSa1be0wmbCfgeB2i8Hj2gQgec8UoLRJjqj7O1q0-r_HtzjAUXlNTX4_e9V0SyZLP5w9j1X8x6uijQ" />
+                    <div
+                        class="bg-white p-8 rounded-3xl border border-outline-variant shadow-sm hover:shadow-md transition-shadow">
+                        <span class="material-symbols-outlined text-primary text-3xl mb-4"
+                            data-icon="stylus">stylus</span>
+                        <h4 class="text-xl font-bold mb-3">Tus "Luces del Día"</h4>
+                        <p class="text-on-surface-variant text-sm">Subrayá y destacá fácilmente esas frases de la lectura
+                            que más te tocan el corazón.</p>
+                    </div>
+                    <div
+                        class="bg-white p-8 rounded-3xl border border-outline-variant shadow-sm hover:shadow-md transition-shadow">
+                        <span class="material-symbols-outlined text-primary text-3xl mb-4"
+                            data-icon="visibility_off">visibility_off</span>
+                        <h4 class="text-xl font-bold mb-3">Modo Oración</h4>
+                        <p class="text-on-surface-variant text-sm">Sumergite en un espacio de lectura inmersivo,
+                            totalmente libre de distracciones.</p>
+                    </div>
+                    <div
+                        class="bg-white p-8 rounded-3xl border border-outline-variant shadow-sm hover:shadow-md transition-shadow">
+                        <span class="material-symbols-outlined text-primary text-3xl mb-4"
+                            data-icon="format_size">format_size</span>
+                        <h4 class="text-xl font-bold mb-3">Lectura a tu medida</h4>
+                        <p class="text-on-surface-variant text-sm">Cambiá el tamaño de la letra con un toque para que
+                            leer sea cómodo y relajante.</p>
+                    </div>
                 </div>
-                <!-- Feature 2 -->
-                <div
-                    class="md:col-span-4 bg-surface-container-highest rounded-3xl p-8 flex flex-col justify-end border border-outline-variant group">
-                    <span class="material-symbols-outlined text-primary text-4xl mb-4"
-                        data-icon="bookmark">bookmark</span>
-                    <h3 class="text-2xl font-bold text-on-surface mb-2">Biblioteca de Fe</h3>
-                    <p class="text-on-surface-variant">Guarda tus reflexiones favoritas y lecturas inspiradoras para
-                        volver a ellas cuando más lo necesites.</p>
+            </div>
+            <!-- Bloque 2: Tu Diario Espiritual -->
+            <div class="mb-20">
+                <h3 class="text-2xl font-bold text-primary mb-8 flex items-center gap-3">
+                    <span class="material-symbols-outlined" data-icon="edit_square">edit_square</span>
+                    Tu Diario Espiritual
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div
+                        class="bg-surface-container-low p-8 rounded-3xl border border-outline-variant shadow-sm hover:shadow-md transition-shadow">
+                        <span class="material-symbols-outlined text-primary text-3xl mb-4"
+                            data-icon="favorite">favorite</span>
+                        <h4 class="text-xl font-bold mb-3">Reflexión y Propósito</h4>
+                        <p class="text-on-surface-variant text-sm">Un espacio íntimo para escribir lo que sentís y
+                            definir el propósito que guiará tu día.</p>
+                    </div>
+                    <div
+                        class="bg-surface-container-low p-8 rounded-3xl border border-outline-variant shadow-sm hover:shadow-md transition-shadow">
+                        <span class="material-symbols-outlined text-primary text-3xl mb-4"
+                            data-icon="import_contacts">import_contacts</span>
+                        <h4 class="text-xl font-bold mb-3">Memoria Espiritual</h4>
+                        <p class="text-on-surface-variant text-sm">Al releer un pasaje del Evangelio, reencontrate con
+                            tus anotaciones anteriores para descubrir qué te dijo Dios en aquel momento y cómo sigue obrando en
+                            tu historia.</p>
+                    </div>
+                    <div
+                        class="bg-surface-container-low p-8 rounded-3xl border border-outline-variant shadow-sm hover:shadow-md transition-shadow">
+                        <span class="material-symbols-outlined text-primary text-3xl mb-4"
+                            data-icon="history">history</span>
+                        <h4 class="text-xl font-bold mb-3">Un viaje en el tiempo</h4>
+                        <p class="text-on-surface-variant text-sm">Navegá por el calendario para recordar qué te dijo
+                            Dios en momentos anteriores.</p>
+                    </div>
+                    <div
+                        class="bg-surface-container-low p-8 rounded-3xl border border-outline-variant shadow-sm hover:shadow-md transition-shadow">
+                        <span class="material-symbols-outlined text-primary text-3xl mb-4"
+                            data-icon="category">category</span>
+                        <h4 class="text-xl font-bold mb-3">Biblioteca por Evangelista</h4>
+                        <p class="text-on-surface-variant text-sm">Tus luces y reflexiones organizadas automáticamente
+                            por cada Evangelio en un solo lugar.</p>
+                    </div>
                 </div>
-                <!-- Feature 3 -->
-                <div
-                    class="md:col-span-4 bg-white rounded-3xl p-8 flex flex-col justify-end border border-outline-variant shadow-sm group">
-                    <span class="material-symbols-outlined text-primary text-4xl mb-4"
-                        data-icon="edit_note">edit_note</span>
-                    <h3 class="text-2xl font-bold text-on-surface mb-2">Diario Personal</h3>
-                    <p class="text-on-surface-variant">Un espacio íntimo para escribir tus pensamientos, oraciones y lo
-                        que Dios pone en tu corazón cada día.</p>
+            </div>
+            <!-- Bloque 3: Llevá tu fe al día a día -->
+            <div>
+                <h3 class="text-2xl font-bold text-primary mb-8 flex items-center gap-3">
+                    <span class="material-symbols-outlined" data-icon="rocket_launch">rocket_launch</span>
+                    Llevá tu fe al día a día
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div
+                        class="bg-primary-container/10 p-8 rounded-3xl border border-primary/20 shadow-sm hover:shadow-md transition-shadow">
+                        <span class="material-symbols-outlined text-primary text-3xl mb-4"
+                            data-icon="local_fire_department">local_fire_department</span>
+                        <h4 class="text-xl font-bold mb-3">Constancia que motiva</h4>
+                        <p class="text-on-surface-variant text-sm">Visualizá tu racha de días seguidos para fortalecer tu
+                            hábito de lectura y oración.</p>
+                    </div>
+                    <div
+                        class="bg-primary-container/10 p-8 rounded-3xl border border-primary/20 shadow-sm hover:shadow-md transition-shadow">
+                        <span class="material-symbols-outlined text-primary text-3xl mb-4"
+                            data-icon="widgets">widgets</span>
+                        <h4 class="text-xl font-bold mb-3">Tu propósito en pantalla</h4>
+                        <p class="text-on-surface-variant text-sm">Widget de inicio para tener tus luces del día siempre
+                            a la vista en tu celular.</p>
+                    </div>
+                    <div
+                        class="bg-primary-container/10 p-8 rounded-3xl border border-primary/20 shadow-sm hover:shadow-md transition-shadow">
+                        <span class="material-symbols-outlined text-primary text-3xl mb-4" data-icon="share">share</span>
+                        <h4 class="text-xl font-bold mb-3">Compartí tu inspiración</h4>
+                        <p class="text-on-surface-variant text-sm">Exportá lecturas y apuntes en PDF o texto plano para
+                            enviar a tus amigos o comunidad.</p>
+                    </div>
                 </div>
             </div>
         </section>
+
         <!-- App Screenshots Section -->
         <section id="screenshots" class="py-24 bg-surface-container-low overflow-hidden">
             <div class="max-w-7xl mx-auto px-6">
