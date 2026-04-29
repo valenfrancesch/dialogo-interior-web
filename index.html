@@ -133,29 +133,32 @@
                     class="absolute inset-0 bg-gradient-to-b from-surface-container-low/50 via-transparent to-surface-container-low">
                 </div>
             </div>
-            <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
-                <span
-                    class="inline-block py-1 px-4 rounded-full bg-primary/10 text-primary font-medium text-sm mb-6 uppercase tracking-wider">Tu
-                    Refugio Espiritual</span>
-                <h1 class="text-5xl md:text-7xl font-bold text-primary mb-8 leading-tight">Tu Compañero en el Camino
-                    Espiritual</h1>
-                <p class="text-xl md:text-2xl text-on-surface-variant mb-10 max-w-2xl mx-auto leading-relaxed">
-                    Encontrá a Dios en medio de la rutina. Reflexiones diarias, lecturas y un lugar íntimo para que la
-                    Palabra te acompañe adonde vayas.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <button onclick="document.getElementById('download').scrollIntoView({ behavior: 'smooth' })"
-                        class="bg-primary text-on-primary px-8 py-4 rounded-xl text-lg font-semibold shadow-xl hover:scale-[1.02] transition-transform">
-                        Comenzar
-                    </button>
-                    <button onclick="document.getElementById('features').scrollIntoView({ behavior: 'smooth' })"
-                        class="bg-white border-2 border-outline-variant text-primary px-8 py-4 rounded-xl text-lg font-semibold hover:bg-surface-container-high transition-colors">
-                        Saber más
-                    </button>
+            <div class="relative z-10 max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-8">
+                <div class="text-center md:text-left">
+                    <span
+                        class="inline-block py-1 px-4 rounded-full bg-primary/10 text-primary font-medium text-sm mb-6 uppercase tracking-wider">Tu
+                        Refugio Espiritual</span>
+                    <h1 class="text-5xl md:text-7xl font-bold text-primary mb-8 leading-tight">La App que te acompaña en tu oración diaria</h1>
+                    <p class="text-xl md:text-2xl text-on-surface-variant mb-10 max-w-2xl leading-relaxed">
+                        Encontrá a Dios en medio de la rutina. Lecturas del evangelio, reflexiones y un lugar íntimo para que la
+                        Palabra te acompañe a donde vayas.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                        <button onclick="document.getElementById('download').scrollIntoView({ behavior: 'smooth' })"
+                            class="bg-primary text-on-primary px-8 py-4 rounded-xl text-lg font-semibold shadow-xl hover:scale-[1.02] transition-transform">
+                            Comenzar
+                        </button>
+                        <button onclick="document.getElementById('features').scrollIntoView({ behavior: 'smooth' })"
+                            class="bg-white border-2 border-outline-variant text-primary px-8 py-4 rounded-xl text-lg font-semibold hover:bg-surface-container-high transition-colors">
+                            Saber más
+                        </button>
+                    </div>
+                </div>
+                <div class="flex justify-center items-center">
+                    <img src="home_app.png" alt="App Home" class="w-full max-w-sm rounded-lg sm:mx-8">
                 </div>
             </div>
         </section>
-        <!-- Features Section -->
         <section id="features" class="py-24 px-6 max-w-7xl mx-auto">
             <div class="text-center mb-20">
                 <h2 class="text-3xl md:text-5xl font-bold text-on-surface mb-6 font-noto-serif">Herramientas para tu Fe
@@ -216,7 +219,7 @@
                         <span class="material-symbols-outlined text-primary text-3xl mb-4"
                             data-icon="favorite">favorite</span>
                         <h4 class="text-xl font-bold mb-3">Reflexión y Propósito</h4>
-                        <p class="text-on-surface-variant text-sm">Un espacio íntimo para escribir lo que sentís y
+                        <p class="text-on-surface-variant text-sm">Un espacio íntimo para escribir lo que te está diciendo Dios y
                             definir el propósito que guiará tu día.</p>
                     </div>
                     <div
@@ -252,7 +255,7 @@
                     <span class="material-symbols-outlined" data-icon="rocket_launch">rocket_launch</span>
                     Llevá tu fe al día a día
                 </h3>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     <div
                         class="bg-primary-container/10 p-8 rounded-3xl border border-primary/20 shadow-sm hover:shadow-md transition-shadow">
                         <span class="material-symbols-outlined text-primary text-3xl mb-4"
@@ -264,9 +267,16 @@
                     <div
                         class="bg-primary-container/10 p-8 rounded-3xl border border-primary/20 shadow-sm hover:shadow-md transition-shadow">
                         <span class="material-symbols-outlined text-primary text-3xl mb-4"
+                            data-icon="notifications_active">notifications_active</span>
+                        <h4 class="text-xl font-bold mb-3">Recordatorios a tu medida</h4>
+                        <p class="text-on-surface-variant text-sm">Configurá la hora de tu recordatorio diario y recibí una notificación especial para no olvidar tu propósito.</p>
+                    </div>
+                    <div
+                        class="bg-primary-container/10 p-8 rounded-3xl border border-primary/20 shadow-sm hover:shadow-md transition-shadow">
+                        <span class="material-symbols-outlined text-primary text-3xl mb-4"
                             data-icon="widgets">widgets</span>
                         <h4 class="text-xl font-bold mb-3">Tu propósito en pantalla</h4>
-                        <p class="text-on-surface-variant text-sm">Widget de inicio para tener tus luces del día siempre
+                        <p class="text-on-surface-variant text-sm">Widget de inicio para tener tus luces del día y propósito siempre
                             a la vista en tu celular.</p>
                     </div>
                     <div
@@ -279,6 +289,7 @@
                 </div>
             </div>
         </section>
+
 
         <!-- App Screenshots Section -->
         <section id="screenshots" class="py-24 bg-surface-container-low overflow-hidden">
